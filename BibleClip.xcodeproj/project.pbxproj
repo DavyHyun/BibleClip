@@ -11,7 +11,34 @@
 		C62C13F02C277002000D3990 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C13EF2C277002000D3990 /* ContentView.swift */; };
 		C62C13F22C277004000D3990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C13F12C277004000D3990 /* Assets.xcassets */; };
 		C62C13F52C277004000D3990 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C62C13F42C277004000D3990 /* Preview Assets.xcassets */; };
+		C62C14022C277051000D3990 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C14012C277051000D3990 /* KeyboardViewController.swift */; };
+		C62C14062C277051000D3990 /* BibleClipKeyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C62C13FF2C277051000D3990 /* BibleClipKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C62C140C2C2771F6000D3990 /* bible.json in Resources */ = {isa = PBXBuildFile; fileRef = C62C140B2C2771F6000D3990 /* bible.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C62C14042C277051000D3990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C62C13E22C277002000D3990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C62C13FE2C277051000D3990;
+			remoteInfo = BibleClipKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C62C140A2C277051000D3990 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C62C14062C277051000D3990 /* BibleClipKeyboard.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C62C13EA2C277002000D3990 /* BibleClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +46,21 @@
 		C62C13EF2C277002000D3990 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C62C13F12C277004000D3990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C62C13F42C277004000D3990 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C62C13FF2C277051000D3990 /* BibleClipKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BibleClipKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62C14012C277051000D3990 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		C62C14032C277051000D3990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C62C140B2C2771F6000D3990 /* bible.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bible.json; path = ../../../Downloads/bible.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C62C13E72C277002000D3990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62C13FC2C277051000D3990 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				C62C13EC2C277002000D3990 /* BibleClip */,
+				C62C14002C277051000D3990 /* BibleClipKeyboard */,
 				C62C13EB2C277002000D3990 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				C62C13EA2C277002000D3990 /* BibleClip.app */,
+				C62C13FF2C277051000D3990 /* BibleClipKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +107,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C62C14002C277051000D3990 /* BibleClipKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C62C140B2C2771F6000D3990 /* bible.json */,
+				C62C14012C277051000D3990 /* KeyboardViewController.swift */,
+				C62C14032C277051000D3990 /* Info.plist */,
+			);
+			path = BibleClipKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +127,34 @@
 				C62C13E62C277002000D3990 /* Sources */,
 				C62C13E72C277002000D3990 /* Frameworks */,
 				C62C13E82C277002000D3990 /* Resources */,
+				C62C140A2C277051000D3990 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C62C14052C277051000D3990 /* PBXTargetDependency */,
 			);
 			name = BibleClip;
 			productName = BibleClip;
 			productReference = C62C13EA2C277002000D3990 /* BibleClip.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C62C13FE2C277051000D3990 /* BibleClipKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C62C14072C277051000D3990 /* Build configuration list for PBXNativeTarget "BibleClipKeyboard" */;
+			buildPhases = (
+				C62C13FB2C277051000D3990 /* Sources */,
+				C62C13FC2C277051000D3990 /* Frameworks */,
+				C62C13FD2C277051000D3990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BibleClipKeyboard;
+			productName = BibleClipKeyboard;
+			productReference = C62C13FF2C277051000D3990 /* BibleClipKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +167,9 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					C62C13E92C277002000D3990 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					C62C13FE2C277051000D3990 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				C62C13E92C277002000D3990 /* BibleClip */,
+				C62C13FE2C277051000D3990 /* BibleClipKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +200,14 @@
 			files = (
 				C62C13F52C277004000D3990 /* Preview Assets.xcassets in Resources */,
 				C62C13F22C277004000D3990 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62C13FD2C277051000D3990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62C140C2C2771F6000D3990 /* bible.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C62C13FB2C277051000D3990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C62C14022C277051000D3990 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C62C14052C277051000D3990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C62C13FE2C277051000D3990 /* BibleClipKeyboard */;
+			targetProxy = C62C14042C277051000D3990 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C62C13F62C277004000D3990 /* Debug */ = {
@@ -267,6 +364,7 @@
 		C62C13F92C277004000D3990 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +394,7 @@
 		C62C13FA2C277004000D3990 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -322,6 +421,58 @@
 			};
 			name = Release;
 		};
+		C62C14082C277051000D3990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4F9SWSA77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibleClipKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibleClipKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = msj.BibleClip.BibleClipKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C62C14092C277051000D3990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4F9SWSA77;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibleClipKeyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibleClipKeyboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = msj.BibleClip.BibleClipKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +490,15 @@
 			buildConfigurations = (
 				C62C13F92C277004000D3990 /* Debug */,
 				C62C13FA2C277004000D3990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C62C14072C277051000D3990 /* Build configuration list for PBXNativeTarget "BibleClipKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C62C14082C277051000D3990 /* Debug */,
+				C62C14092C277051000D3990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
